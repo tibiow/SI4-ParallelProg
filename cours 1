@@ -1,0 +1,33 @@
+A quoi ça sert?
+	Aller plus vite
+	-traiter plus de chose
+
+Si un ensemble de taches sont éxécutées les unes à la suite des autres. On parle d'éxécutions séquentielles
+
+On parle d'éxécutions parallèle quand plusieurs taches sont traitées simultanément.									on en parle souvent niveau hardware
+On parle d'éxécution conccurente quand plusieurs taches voient leur éxécution progresser.							on en parle souvent niveau software
+
+Parrallèle = 2 machines à café pour 2 queue
+conccurence = 1 machines à café pour 2 queue
+
+classificaion de Flynn (1966):
+classifier le matériel pour le parallèlisme.
+en fonction des besoins on ne va pas choisir le même matérielle. (eg aller plus vite ou traiter plus de choses)
+	Aller plus vite(Instruction +vite)
+	traiter plus de choses(Données +de trucs)
+
+					Single Instruction 					Multiple Instructions
+Single Data			SISD								MISD
+Multiple Data		SIMD								MIMD
+
+
+SISD proccesseur Mono coeur
+MIMD Plusieurs ordinateurs travaillant ensemble, eproc multicoeur, GPU
+SIMD processeur vectoriel		A la mode dans les années 90 CRAY. Maintenant certaines instructions sont directement gérés par le proco
+MISD pipeline					
+
+différence SISD MISD: pour une instruction à 4 unité de temps SISD = 8 t ,MIMD = 5 t
+
+pipeline 4 étages:
+Fetch,Decode,execute,white back
+chercher en mémoire, decoder la donnée et cherche les opérandes, execute et il écrit.
